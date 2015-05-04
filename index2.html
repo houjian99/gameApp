@@ -909,13 +909,13 @@ $(function(){
                 "title":            dataForWeixin.title+$("#totalsc").val()+" 分 你能超过我吗？ "+dataForWeixin.desc
             }, function(res){
                 report(dataForWeixin.url, 1);
-                //recordscore($("#totalsc").val());
+                recordscore($("#totalsc").val());
                 shareSuccess();
             });
         });
         WeixinJSBridge.on('menu:share:timeline', function(argv){
             report(dataForWeixin.url, 2);
-            //recordscore($("#totalsc").val());
+            recordscore($("#totalsc").val());
             WeixinJSBridge.invoke('shareTimeline',{
             "img_url":dataForWeixin.img,
             "img_width":"120",
@@ -933,7 +933,7 @@ $(function(){
             "url":dataForWeixin.url
             }, function(res){
                 report(dataForWeixin.url, 3);
-                //recordscore($("#totalsc").val());
+                recordscore($("#totalsc").val());
                 shareSuccess();
             });
         });
